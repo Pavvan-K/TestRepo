@@ -62,4 +62,6 @@ Note: Don't delete the branch in both remote and local. If you delete in Local t
 To check the attached remote repo to your local intialized git directory:
 git remote -v
 
+To undo changes after merging branch1 to master:
 
+git reset --hard origin master (So merged code will be demerged)
