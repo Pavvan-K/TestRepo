@@ -9,6 +9,7 @@ git local_func():
     
 def testFunc2():
     print("New func added by someone2 and pushed to remote")
+    print("Edited in branch1")
     
 def Func_MasterBranch():
     print("Master Branch func added")
