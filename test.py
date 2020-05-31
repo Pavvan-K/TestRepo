@@ -6,3 +6,6 @@ def testFunc():
 
 git local_func():
     print("Now I added this in local in master branch")
+    
+def testFunc2():
+    print("New func added by someone2 and pushed to remote")
