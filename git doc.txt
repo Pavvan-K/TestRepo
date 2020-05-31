@@ -69,3 +69,5 @@ git reset --hard origin master (So merged code will be demerged)
 Note:
 master --- > branch if it works then branch ----> master
 					if not works then hard reset origin/branch
+
+Testing
