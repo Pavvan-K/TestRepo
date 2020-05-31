@@ -14,4 +14,5 @@ def testFunc2():
 def Func_MasterBranch():
     print("Master Branch func added")
 
-print("This is feature1 added now in local now I edited slightly")
+print("This is feature1 added now in local now I edited slightly as per feature2")
+print("Feature2 created and added")
