@@ -1,3 +1,0 @@
-first log
-second log
-third commit
