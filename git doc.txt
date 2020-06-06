@@ -1,0 +1,67 @@
+If file is deleted in remote branch and existed in Local:
+	Commit the changes in Local branch
+	Try to push to central
+	As per warning, you will try to pull the changes(as file deleted) in master
+	Now it will throw an error like 
+==============================================================
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+===============================================================
+	So, try to add again your local changes now using add .
+	now commit using git commit -m "My Commit"
+	Now push to remote
+	Your all deleted files will appear there in that branch now.
+
+
+Preacutions:
+-----------
+Always create a branch while working
+Keep Backup to master as master2 (Depence)
+Always merge master changes with your branch and test
+	If works:
+		push to remote(Depends)
+		Merge to master(Mandatory)
+	If not works:
+		commit your branch 
+		pull latest master code
+		merge master with your branch
+		test your code (Updated Master + Branch)
+		works pretty much mostly, now push to master again!
+
+Top Frequently used commands:
+---------------------------
+git clone <REMOTE REPO URL either https (or) git"
+git fetch (To get all the branches in a orign repo)
+
+To create the branch in Local:
+git checkout-b <BRANCH NAME> (Alwasy master branch code only will be copied to you <BRANCH NAME>)
+
+Push the branch to Remote:
+git push origin <BRANCH NAME>
+
+To move to anothe branch:
+git checkout  <EXISTED BRANCH NAME> 
+
+To get the all branches:
+git branch --list
+
+For merging:
+git merge <Branch name>
+
+
+To delete branch locally:
+git branch -d localBranchName
+
+To delete branch remotely:
+git push origin --delete remoteBranchName
+
+Note: Don't delete the branch in both remote and local. If you delete in Local then use fetch to get the branch or If you delete in Remote use push to push the deleted branch in remote to make it available agian there in remote.
+
+To check the attached remote repo to your local intialized git directory:
+git remote -v
+
+To undo changes after merging branch1 to master:
+
+git reset --hard origin master (So merged code will be demerged)
